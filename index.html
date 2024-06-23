@@ -7,7 +7,31 @@
         body{
             color: aqua;
         }
-    </style>
+        table{
+            width: 100%;          /* this width also passed as an attribute in table tag while making the table*/
+            border-collapse: collapse;  /* if we remove border collapse , each cell has its own border  */
+            text-align: center;
+            color: #000000;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 5px
+        }
+        tr {                                
+            background-color: hsl(180, 57%, 40%);
+        }
+
+        .lal
+        {
+            background-color: #000000;
+        }
+        #haraa
+        {
+            background-color: rgb(229, 127, 255);
+        }
+    </style>  <!-- for even/odd row coloured :nth-child(even/odd) -->
+ 
+
     <link rel="stylesheet" href="style.css">   <!-- we write this file it overwrite style tag 
                                                whatever write later it implement , 
                                                thats why style.css is considered and color is white-->
@@ -132,22 +156,181 @@
     dicta error repellendus quam quisquam ipsa quis possimus numquam minima aliquid in dolor aliquam nobis. Repellendus quo voluptas 
     voluptatibus aperiam sed totam, nobis fugiat impedit soluta nesciunt minima iure ipsum qui voluptatem magni facere. 
     Labore voluptate voluptas odit illo provident laboriosam accusantium.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure exercitationem mollitia nesciunt molestias? Minus unde, 
-        perspiciatis omnis inventore tempore debitis, ab repellendus distinctio sint pariatur tenetur commodi id dolores similique 
-        nisi assumenda quaerat? Molestiae consequuntur neque doloribus facere, ea tenetur asperiores esse, reiciendis accusamus 
-        aliquid ad provident consectetur! Inventore dolore odit quidem perferendis praesentium nostrum tempora dolorum laborum esse
-        atque modi quia possimus, officia repellat repudiandae porro corporis nesciunt suscipit, sit ipsum quibusdam culpa! Fugiat 
-        asperiores nemo quis necessitatibus numquam ex excepturi illum molestias quae illo blanditiis, cumque quibusdam doloribus 
-        earum autem quisquam veritatis libero consequuntur dolorem! Non exercitationem ea, velit consequatur repudiandae beatae illo
-        debitis laborum commodi veritatis nisi dicta adipisci qui? Quod id eos voluptas fuga nesciunt labore eligendi blanditiis eaque 
-        molestiae possimus error ducimus iste, consectetur doloribus! Molestias id ipsam eius doloribus sequi cum, itaque labore ipsum!
-        Quidem facere sequi in eos minus autem. Voluptatibus recusandae illum, tempore id libero sint earum commodi maiores distinctio 
-        dicta error repellendus quam quisquam ipsa quis possimus numquam minima aliquid in dolor aliquam nobis. Repellendus quo voluptas 
-        voluptatibus aperiam sed totam, nobis fugiat impedit soluta nesciunt minima iure ipsum qui voluptatem magni facere. 
-        Labore voluptate voluptas odit illo provident laboriosam accusantium.</p>
 
 <img src="https://www.arminonbike.com/wp-content/uploads/2020/06/9_armin-hoyer_laferrari-port-monaco-1.jpg" 
-     width="600px" alt="imagee">
+    width="600px" alt="imagee">
+<img src="./blk foto.jpg" width="600px" height="550px" alt="imagee">
+
+<picture>
+    <source media="(min-width : 600px )" srcset="./ferrari.jpg"/>               <!-- picture tag with source attribute load that image accoring to to the size -->
+    <source media="(min-width : 450px )" srcset="./free-nature-images.jpg"/>
+    <img src="./ferrari.jpg" alt="">
+</picture>
+
+                  <!--                        an image map generator                              -->
+
+                 
+<img src="mountain.png" usemap="#image-map">
+
+<map name="image-map">
+    <area onclick="one()" target="" alt="peak" title="peak" href="" coords="62,33,30,11" shape="rect">
+    <area onclick="two()" target="" alt="river" title="river" href="" coords="42,109,224,157" shape="rect">
+    <area onclick="three()" target="" alt="tree" title="tree" href="" coords="177,71,264,100" shape="rect">
+</map>
+
+<script>
+function one(){
+    alert('you clicked on peak')
+}
+function two(){
+    alert('you clicked on river')
+}
+function three(){
+    alert('you clicked on tree')
+}
+</script>
+
+<!--                                            .........tables.........                                                     -->
+
+<table>
+    <tr>
+        <th>country</th>
+        <th>country code</th>
+        <th>mail</th>
+    </tr>
+    <tr>
+        <td>india</td>
+        <td>IN</td>
+        <td>india@mail</td>
+    </tr>
+    <tr>
+        <td>russia</td>
+        <td>RU</td>
+        <td>russia@mail</td>
+    </tr>
+    <tr>
+        <td>spain</td>
+        <td>SP</td>
+        <td>spain@mail</td>
+    </tr>
+</table> <br>
+
+<!--another table--> 
+
+<table>
+    <tr>
+        <th colspan="2">country</th>  <!-- now this col. takes the span of two cells-->
+        <td>india</td>
+        <td>japan</td>
+        
+    </tr>
+    <tr>
+        <th rowspan="2">code</th>  <!-- now this row takes the span of two cells-->
+        <td>IN</td>
+        <td>JP</td>
+        
+    </tr>
+    <tr>
+        <th>weather</th>
+        <td>warm</td>
+        <td>cold</td>
+        
+    </tr>
+   
+</table>
+
+<!--  table style at head in style tag  -->
+
+<!--                                               .........lists.........                                             -->
+<h1>lists</h1>
+    <h2>unordered list (ul)</h2>
+    <ul>                           <!-- show bullet points  ,  [ul>li*4]-->  
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul>                     <!-- [ul>li*3{one}]-->
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+    <h2>ordered list (ol)</h2>
+    <ol type="I">                                   <!-- show ordered or numbered points  ,  [ol>li*3] -->
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+    
+    <h2>data list (dl)</h2>
+    <dl>
+        <dt>THIGHS</dt>                   <!-- dt = data title -->
+        <dd>thick thighs</dd>                   <!-- dd = data description -->
+        <dt>CHICK</dt>                   
+        <dd>russian chick</dd>                   
+    </dl>
+
+    <h2>nested list </h2>                   <!--        ol inside ul , vice versa     -->
+    <ul>
+        <li>
+            1  
+            <ol type="i">
+                <li>sun</li>
+                <li>rise</li>
+            </ol>
+        </li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+<!--                                 in-line and block elements                                                         -->
+<h3>test1</h3>
+<p>test2</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Quisquam, laudantium,placeat harum accusamus incidunt dignissimos
+     ipsam aut facilis dicta, aperiam doloremque consequuntur <span>test 3 </span></p>
+
+     <!-- the elements take whole block or row or their full space in the page are called block element
+          and those are not are called inline elements 
+          h3 and p tags are block element 
+          span is the in line element-->
+<hr>
+
+<!--                                         ......... class , id , iframes.........                                 -->
+
+<p class="lal">Lorem ipsum dolor sit amet consectetur adipisicing 
+    elit. Laudantium laboriosam asperiores laborum neque 
+    voluptatum commodi quo illo modi ratione deleniti!</p>
+
+<p id="haraa">Lorem ipsum, dolor sit amet consectetur adipisicing
+    elit. Ducimus praesentium reprehenderit libero id ratione
+     deserunt error molestias, tempore nobis officiis.</p>
+<h1 class="lal">testing1</h1>
+<h2>testing2</h2>
+
+<!-- in style , class targeted by ( .whatever_name_of_class )
+     in style , id targeted by ( #whatever_name_of_id ) 
+     id and class doing same function
+     id are given unique to all tags , so try to use one id attribute 
+     but class can give to multiple tags , more no.of class attributes can be used -->
+    
+     <table>
+        <tr>
+            <th>first video</th>  
+            <td> <iframe width="444" height="250" src="https://www.youtube.com/embed/QwO04OALwvw?si=qFIInvrVpAqvnV7z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </td>
+            
+        </tr>
+        <tr>
+            <th>second video </th>  
+            <td>  <iframe width="444" height="250" src="https://www.youtube.com/embed/D3eYEngHMNo?si=Bmy83_d8-WHnsRKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  </td>
+            
+        </tr>
+<!-- inframe tag allow us to load another web page with any aspect on a web page of ours  
+   for ex: google map , yt video , portion of big web page-->
+    </table>
+    
 
 
 </body>
