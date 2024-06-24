@@ -331,7 +331,123 @@ function three(){
    for ex: google map , yt video , portion of big web page-->
     </table>
     
+<!--                                        ......... head tag in html .........                                               -->
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> this is title tag </title>
+
+   <meta charset="UTF-16"> <!-- utf 16 supports many type of characters like emoji , japanese char. , russian alphabets -->
+   <meta name="keywords" content="html , web ">
+   <meta name="description" content="this is a web page tutorial ">
+   <meta http-equiv="refresh" content="30"> <!-- it will refresh the page every 30 second as the value given in the content -->
+   <meta name="viewport" content="width=device-width, initial-scale=2.0"> <!-- if this tag is not here then the page loads in 
+   mobile as same as the size of computer , with this tag and its scale(2.0) make the page according to the phone if the scale 
+   is somewhere between (0.9) then it will between the little zoom of computer and size of phone  and this scale is range between
+   (0.1 - 10) -->
+   
+   <base href=""> <!-- it deals with the media and its directory , if we use img tag we define its path again and again 
+   so we use base tag in head with the value of link which show the folder in which media is existing 
+   and after this tag we only use the name of media in img tag instead of its whole path   --> 
+
+   <!-- <style> body { color: #ffffff; }</style> -->
+   <link rel="stylesheet" href="./style.css">   <!-- link:css = gives link to the css file
+   and rel is the attribute which tell the realtion of the file it is stylesheet scriptsheet
+   and writing  ( ./ ) before file name tell the tag to refer current directory -->
+   
+
+</head>
+<body>
+    <h1> heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, itaque dicta. 
+        Necessitatibus, totam. Corrupti eligendi sapiente odit dicta! Officiis provident
+        mollitia repellat recusandae et veritatis eveniet, omnis cum molestias adipisci
+        perferendis quae iste at neque quidem aut blanditiis corporis quisquam voluptas 
+        pariatur nisi id laborum sed perspiciatis? Pariatur distinctio praesentium eum dolorem 
+        suscipit expedita dolores totam repudiandae, laborum at, possimus recusandae voluptas 
+        nobis, ipsam blanditiis excepturi quas beatae! Accusantium ullam voluptatem rem quam 
+        voluptas quos minus aperiam explicabo. Suscipit, accusantium. Nemo magnam blanditiis,
+        error odio,rerum laborum qui hic consequatur quos quo explicabo soluta praesentium necessitatibus
+         facilis commodi. Eveniet, odit.</p>
+
+<!--                                        ......... html semantics .........                                                -->
+
+<!-- older / non semantic tags : the tag which define by a class <div> tag is called non semantic tag 
+    > <div class="header"></div>
+    > <div class="footer"></div>
+    > <div class="navbar"></div>
+    > <div class="article"></div>         
+    > <div class="content"></div>         -->
+  
+
+
+<!-- newer / semantic tag  : the tag which define by without class <div> tag is called semantic tag 
+    <code></code>
+    <kbd></kbd>
+    <samp></samp>
+    <var></var>
+    <pre></pre>
+    <header></header>
+    <nav></nav>
+    <article></article>
+    <aside></aside>
+    <section></section>
+    <footer></footer>
+    <article>
+    <time datetime=""></time>  
+    <figure></figure>
+    <main></main>
+    <summary></summary>
+    <details></details>
+    <figcaption></figcaption>  -->
+
+
+</body>
+</html>
+<form action="url" method="" accept-charset="UTF-8" autocomplete="off" enctype="">
+    <!-- action is the destination where to send url with filled form 
+      method has three types dialog , get , post 
+      get : show the data filled in url -->
+
+    <label for="fname">FIRST NAME</label> <!-- label tag is like heading of input box 
+                                                 for tag represents which id is associate dwith it-->
+    <input type="text" placeholder="first name" name="" id="fname"> <br>
+    <!-- place holder is the text which vanishes when we type something in the box 
+     id is the name by which it can be differentiated -->
+      
+    <label for="lname">LAST NAME</label>
+    <input type="text" placeholder="last name" name="" value="" id="lname"> 
+    <input type="reset" value="reset"> 
+ 
+    <label for="">password</label>
+    <input type="password" name="" id=""> 
+
+    <input type="week">
+    <input type="date">
+
+    <!-- when option are selceted (one / many ) -->
+     <select name="editors" id="" > <!-- if we write multiple as an attribute then we use more than one options -->
+        <option value="rollsroyce">rollsroyce</option>
+        <option value="seat">seat</option>
+        <option value="bmw">bmw</option>
+        <option value="volvo">volvo</option>
+     </select>
+
+     <input type="hidden"> <!-- used for some token send to the server , which kept hidden from the user -->
+     <input type="range ">
+
+    <button type="submit"> submit </button>
+
+
+</form> <!-- what ever we write inside the form tag , goes together in the server-->
+
+<video src="./videoplayback.mp4" width="" height="" controls ></video> <!--if we write ( autoplay ) then 
+if we go to web page it plays automatically or (muted) it started without voice -->
+<audio src=""></audio> <!-- same like video tag , give it a source and pass some attributes -->
+
+<canvas id="canvas "></canvas> <!-- used in API's we need java script , we cant understand api's with html alone-->
+<!--                                .........  HMTL SERIES DONE .........                                                        -->
 </body>
 </html>
